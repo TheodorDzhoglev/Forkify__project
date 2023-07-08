@@ -98,7 +98,7 @@ const controlAddRecipe = async function (newRecipe) {
     // Close form
 
     setTimeout(function () {
-      addRecipeView.toggleWindow();
+      addRecipeView.closeWindow();
     }, MODAL_CLOSE_SEC * 1000);
 
     // Success message
@@ -113,7 +113,6 @@ const controlAddRecipe = async function (newRecipe) {
     console.log('💥', err);
     addRecipeView.renderError(err.message);
   }
-  location.reload();
 };
 
 const init = function () {
